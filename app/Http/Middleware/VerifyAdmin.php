@@ -16,7 +16,7 @@ class VerifyAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(count(Auth::user()->isAdmin)>0 && Auth::check()) // count(Auth::user()->isAdmin)>0
+        if(count(Auth::user()->isAdmin)>0 && Auth::check()) 
             return $next($request);
         else return redirect('/login');
         

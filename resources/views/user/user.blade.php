@@ -1,21 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-
-            <h1 class="h2">Users</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
-              </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
-            </div>
-          </div> 
-          
+        
+           
+          <div class="table-responsive ">
+          <h1>Users Dashboard</h1>
+          <a href="/user/create" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Create new user</a>
         <!-- start content  //(count(Auth::user()->isAdmin)>0 )   -->
+        @if(Session()->has('status'))
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">X</button>
+            {{Session()->get('status')}}
+          </div>
+        @endif
+
         <table class="table table-striped table-sm">
               <thead>
                 <tr>
@@ -38,15 +36,21 @@
                   <td>@foreach ($user->roles as $role) 
                         {{ $role->name }}
                         @endforeach 
-                        
+                        {{ $user->findRoleByUserId }}
                  </td>
-                  <td><a href="#" title="Add"><i class="fas fa-plus"></i></a>&nbsp;<a href="#" title="Edit"><i class="fas fa-edit"></i></a>&nbsp;<a href="#" title="Delete"><i class="fas fa-minus"></i></a> </td>
+                  <td><a href="/user/{{$user->id}}/edit" title="Edit user"><i class="fas fa-edit"></i></a>&nbsp;
+                  <form action="/user/{{$user->id}}" method="post">
+                    @csrf 
+                    @method('DELETE')
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                  </form>
+                    </td>
                 </tr>
                 @endforeach
                 
                 </tbody>
         </table>
-      
+        </div>
         <!-- end content -->
 
           

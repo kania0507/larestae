@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\Role;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -16,14 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-
-        //$post = Post::find(1);
-        //$roles = Role::find($users->role_id);
-
-        $roles = Role::all();
-
-        
+        $users = User::all(); 
+        $roles = Role::all(); 
 
         return view('user.user', ['users' => $users, 'roles' => $roles]);
     }
@@ -35,7 +30,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $roles = Role::all(); 
+        return view('user.createUser')->with('roles', $roles);
     }
 
     /**
@@ -46,7 +42,21 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|unique:users|max:255',
+            'email' => 'required|email|unique:users|max:255',
+            'password' => 'required|min:6'
+        ]);
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password); 
+        $user->save();
+        $role = Role::find($request->role);
+        $user->roles()->attach($role);
+
+        $request->session()->flash('status', $request->name. ' is created successfully');
+        return redirect('/user');
     }
 
     /**
@@ -68,7 +78,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        $roles = Role::all(); 
+        return view('user.editUser')->with('user', $user)->with('roles', $roles);
     }
 
     /**
@@ -80,7 +92,23 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255',
+            'password' => 'required|min:6',
+            'role' => 'required'
+        ]);
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password); 
+        $user->save();
+
+        $role = Role::find($request->role);
+        $user->roles()->attach($role);
+
+        $request->session()->flash('status', $request->name. ' is updated successfully');
+        return redirect('/user');
     }
 
     /**
@@ -91,11 +119,12 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        User::find($id)->roles()->detach(); 
+        User::destroy($id);
+        Session()->flash('status', 'The user is deleted successfully');
+        return redirect('/user');
     }
 
-    public function findRoleByUserId($id)
-    {
-        //$role->users()->attach($userIds);
-    }
+    
 }
