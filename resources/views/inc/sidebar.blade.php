@@ -2,7 +2,7 @@
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="/dashboard/dashboard">
+                <a class="nav-link active" href="/dashboard">
                   <span data-feather="home"></span>
                   Dashboard <span class="sr-only">(current)</span>
                 </a>
@@ -20,7 +20,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/user/user">
+                <a class="nav-link" href="/user">
                   <span data-feather="users"></span>
                   Users
                 </a>
