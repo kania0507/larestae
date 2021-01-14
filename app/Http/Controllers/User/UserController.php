@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use App\Role;
 
 class UserController extends Controller
 {
@@ -16,7 +17,15 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('user.user')->with('users', $users);
+
+        //$post = Post::find(1);
+        //$roles = Role::find($users->role_id);
+
+        $roles = Role::all();
+
+        
+
+        return view('user.user', ['users' => $users, 'roles' => $roles]);
     }
 
     /**
@@ -83,5 +92,10 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function findRoleByUserId($id)
+    {
+        //$role->users()->attach($userIds);
     }
 }
