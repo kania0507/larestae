@@ -4,7 +4,7 @@
               <li class="nav-item">
                 <a class="nav-link active" href="/dashboard">
                   <span data-feather="home"></span>
-                  Dashboard <span class="sr-only">(current)</span>
+                  Dashboard  
                 </a>
               </li>
               <li class="nav-item">

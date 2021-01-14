@@ -39,10 +39,11 @@
                         {{ $user->findRoleByUserId }}
                  </td>
                   <td><a href="/user/{{$user->id}}/edit" title="Edit user"><i class="fas fa-edit"></i></a>&nbsp;
-                  <form action="/user/{{$user->id}}" method="post">
+                  <form action="/user/{{$user->id}}" method="post" id="my_form" class="deleteForm" >
                     @csrf 
                     @method('DELETE')
-                    <input type="submit" value="Delete" class="btn btn-danger">
+                    
+                    <button type="submit"  class="btn btn-link" title="Delete User"><i class='fas fa-minus'></i></button>
                   </form>
                     </td>
                 </tr>

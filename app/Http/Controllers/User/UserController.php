@@ -105,7 +105,8 @@ class UserController extends Controller
         $user->save();
 
         $role = Role::find($request->role);
-        $user->roles()->attach($role);
+        if (!$user->roles()->find($request->role))
+            $user->roles()->attach($role);
 
         $request->session()->flash('status', $request->name. ' is updated successfully');
         return redirect('/user');
