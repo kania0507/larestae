@@ -13,9 +13,9 @@
                 This week
               </button>
             </div>
-          </div>
-
-        <!-- start content -->
+          </div> 
+          
+        <!-- start content  //(count(Auth::user()->isAdmin)>0 )   -->
         <table class="table table-striped table-sm">
               <thead>
                 <tr>
@@ -37,16 +37,15 @@
                   <td>{{ $user->address }}</td>
                   <td>@foreach ($user->roles as $role) 
                         {{ $role->name }}
-                        @endforeach
+                        @endforeach 
+                        
                  </td>
-                  <td><a href="#" title="Add">+</a> <a href="#" title="Edit">*</a> <a href="#" title="Delete">-</a> </td>
-                  </tr>
+                  <td><a href="#" title="Add"><i class="fas fa-plus"></i></a>&nbsp;<a href="#" title="Edit"><i class="fas fa-edit"></i></a>&nbsp;<a href="#" title="Delete"><i class="fas fa-minus"></i></a> </td>
+                </tr>
                 @endforeach
-                
                 
                 </tbody>
         </table>
-
       
         <!-- end content -->
 

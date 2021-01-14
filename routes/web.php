@@ -10,17 +10,25 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//use App\Http\Middleware\VerifyAdmin;
 
-Route::get('/', function () {
-    return view('dashboard/dashboard');
+
+Route::middleware(['auth'])->group(function(){
+    Route::get('/', 'HomeController@index');
+    Route::get('/dashboard', function () {
+        return view('dashboard/dashboard');
+    });
+
+    
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    
 });
-Route::get('/dashboard', function () {
-    return view('dashboard/dashboard');
+
+Route::middleware(['auth', 'verifyAdmin'])->group(function(){
+   
+
+    Route::resource('user', 'User\UserController');
 });
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('user', 'User\UserController');
+Auth::routes(['register'=>false]);
