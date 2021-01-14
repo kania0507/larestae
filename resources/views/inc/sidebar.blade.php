@@ -7,6 +7,7 @@
                   Dashboard  
                 </a>
               </li>
+              @if(Auth::user() && count(Auth::user()->isAdmin)>0 )
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="file"></span>
@@ -14,11 +15,18 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="product/product">
                   <span data-feather="shopping-cart"></span>
                   Products
                 </a>
+                  <ul ><li><a class="nav-link" href="product/category">
+                  <span data-feather="shopping-cart"></span>
+                  Products Category
+                  </a></li></ul>
+                
               </li>
+             
+
               <li class="nav-item">
                 <a class="nav-link" href="/user">
                   <span data-feather="users"></span>
@@ -31,6 +39,7 @@
                   Reports
                 </a>
               </li>
+              @endif
             </ul>
 
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
