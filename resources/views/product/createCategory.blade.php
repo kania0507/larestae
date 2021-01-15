@@ -3,7 +3,7 @@
 @section('content')
   <div class="container">
     <div class="row justify-content-center">
-      @include('management.inc.sidebar')
+      @include('inc.sidebar')
       <div class="col-md-8">
         <i class="fas fa-align-justify"></i>Create a Category
         <hr>
@@ -16,7 +16,7 @@
               </ul>
           </div>
         @endif
-        <form action="/management/category" method="POST">
+        <form action="/product/category" method="POST">
           @csrf
           <div class="form-group">
             <label for="categoryName">Category Name</label>

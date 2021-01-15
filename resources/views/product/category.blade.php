@@ -9,6 +9,8 @@
             {{Session()->get('status')}}
           </div>
         @endif
+        <a href="/product/category/create" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Create new category</a>
+        <br />        
         <table class="table table-bordered">
           <thead>
             <tr>
@@ -24,10 +26,10 @@
                 <th scope="row">{{$category->id}}</th>
                 <td>{{$category->name}}</td>
                 <td>
-                  <a href="/management/category/{{$category->id}}/edit" class="btn btn-warning">Edit</a>
+                  <a href="/product/category/{{$category->id}}/edit" class="btn btn-warning">Edit</a>
                 </td>
                 <td>
-                <form action="/management/category/{{$category->id}}" method="post">
+                <form action="/product/category/{{$category->id}}" method="post">
                   @csrf
                   @method('DELETE')
                   <input type="submit" value="Delete" class="btn btn-danger">

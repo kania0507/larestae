@@ -32,8 +32,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $Productcategories = ProductCategory::all();
-        return view('product.createProduct')->with('Productcategories', $Productcategories);
+        $productcategories = ProductCategory::all();
+        return view('product.createProduct')->with('productcategories', $productcategories);
     }
 
     /**
@@ -45,7 +45,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:menus|max:255',
+            'name' => 'required|unique:products|max:255',
             'price' => 'required|numeric',
             'category_id' => 'required|numeric'
         ]);
@@ -58,7 +58,7 @@ class ProductController extends Controller
                 'image' => 'nullable|file|image|mimes:jpeg,png,jpg|max:5000'
             ]);
             $imageName = date('mdYHis').uniqid().'.'.$request->image->extension();
-            $request->image->move(public_path('menu_images'), $imageName);
+            $request->image->move(public_path('images/product_images'), $imageName);
         }
         //save information to Menus table
         $product = new Product();
@@ -69,7 +69,7 @@ class ProductController extends Controller
         $product->category_id = $request->category_id;
         $product->save();
         $request->session()->flash('status', $request->name. ' is saved successfully');
-        return redirect('/product/product');
+        return redirect('/product');
     }
 
     /**
@@ -117,12 +117,12 @@ class ProductController extends Controller
             $request->validate([
                 'image' => 'nullable|file|image|mimes:jpeg,png,jpg|max:5000'
             ]);
-            if($menu->image != "noimage.png"){
-                $imageName = $menu->image;
-                unlink(public_path('product_images').'/'.$imageName);
+            if($product->image != "noimage.png" && $product->image !=''){
+                $imageName = $product->image;
+                unlink(public_path('images/product_images').'/'.$imageName);
             }
             $imageName = date('mdYHis').uniqid().'.'.$request->image->extension();
-            $request->image->move(public_path('product_images'), $imageName);
+            $request->image->move(public_path('images/product_images'), $imageName);
         }else{
             $imageName = $product->image;
         }
@@ -134,7 +134,7 @@ class ProductController extends Controller
         $product->category_id = $request->category_id;
         $product->save();
         $request->session()->flash('status', $request->name. ' is updated successfully');
-        return redirect('/product/product');
+        return redirect('/product');
     }
 
     /**
@@ -146,8 +146,8 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
-        if($product->image != "noimage.png" && File::exists(public_path('product_images').'/'.$product->image ) ){
-            unlink(public_path('product_images').'/'.$product->image);
+        if($product->image != "noimage.png" && File::exists(public_path('images/product_images').'/'.$product->image ) ){
+            unlink(public_path('images/product_images').'/'.$product->image);
         }
         $productName = $product->name;
         $product->delete();

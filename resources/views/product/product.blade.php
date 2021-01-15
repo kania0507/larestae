@@ -9,8 +9,11 @@
             {{Session()->get('status')}}
           </div>
         @endif
+       
         <table class="table table-striped table-sm">
+         
           <thead>
+          <tr><td  colspan=8 class="align-right"><a href="/product/create" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Create new product</a></td></tr>
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Name</th>
@@ -27,7 +30,7 @@
               <tr>
                 <th scope="row">{{$product->id}}</th>
                 <td>{{$product->name}}</td>
-                <td> <img src="{{asset('images')}}/{{$product->image}}" alt="{{$product->name}}" width="120px" height="120px" class="img-thumbnail"></td>
+                <td> <img src="{{asset('images/product_images')}}/{{$product->image}}" alt="{{$product->name}}" width="120px" height="120px" class="img-thumbnail"></td>
                 <td>{{$product->description}}</td>
                 <td>{{$product->price}}</td>
                 <td>
