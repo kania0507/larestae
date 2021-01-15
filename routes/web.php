@@ -26,9 +26,9 @@ Route::middleware(['auth'])->group(function(){
 });
 
 Route::middleware(['auth', 'verifyAdmin'])->group(function(){
-    
-    Route::resource('product/category', 'Product\CategoryController');
 
+    Route::resource('product/category', 'Product\CategoryController');
+    Route::resource('product', 'Product\ProductController');
     Route::resource('user', 'User\UserController');
 });
 
