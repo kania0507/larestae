@@ -37,10 +37,10 @@
                 @endforeach
                 </select></td>
                 <td>
-                  <a href="/product/product/{{$product->id}}/edit" class="btn btn-warning">Edit</a>
+                  <a href="/product/{{$product->id}}/edit" class="btn btn-warning">Edit</a>
                 </td>
                 <td>
-                <form action="/product/product/{{$product->id}}" method="post">
+                <form action="/product/{{$product->id}}" method="post">
                   @csrf
                   @method('DELETE')
                   <input type="submit" value="Delete" class="btn btn-danger">
