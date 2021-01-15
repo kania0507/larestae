@@ -32,7 +32,7 @@
                   <span data-feather="users"></span>
                   Users
                 </a>
-                <ul ><li><a class="nav-link" href="#">
+                <ul ><li><a class="nav-link" href="/role">
                   <span data-feather="shopping-cart"></span>
                   User's Role
                   </a></li></ul>
