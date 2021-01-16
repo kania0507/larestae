@@ -14,7 +14,7 @@
 
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('/', 'HomeController@index');
+    //Route::get('/', 'HomeController@index');
     Route::get('/dashboard', function () {
         return view('dashboard/dashboard');
     });
@@ -34,3 +34,5 @@ Route::middleware(['auth', 'verifyAdmin'])->group(function(){
 });
 
 Auth::routes(['register'=>false]);
+
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
