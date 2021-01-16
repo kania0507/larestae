@@ -1,11 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-        
-           
-          <div class="table-responsive ">
-          <h1>Users Dashboard</h1>
+<div class="clearfix">
+      <h1>Users Role</h1>
           <a href="/role/create" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Create new role</a>
+          
         <!-- start content  //(count(Auth::user()->isAdmin)>0 )   -->
         @if(Session()->has('status'))
           <div class="alert alert-success">
@@ -14,7 +13,7 @@
           </div>
         @endif
 
-        <table class="table table-striped table-sm">
+        <table class="table table-striped">
               <thead>
                 <tr>
                   <th>ID</th>
@@ -43,8 +42,8 @@
                 
                 </tbody>
         </table>
-        </div>
+        
         <!-- end content -->
-
+        </div>
           
 @endsection

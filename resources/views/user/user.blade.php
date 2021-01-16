@@ -2,10 +2,12 @@
 
 @section('content')
         
-           
-          <div class="table-responsive ">
-          <h1>Users Dashboard</h1>
+  <div class="clearfix">
+        <h1>Users Dashboard</h1>
           <a href="/user/create" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Create new user</a>
+         
+       <div class="table-responsive ">
+          
         <!-- start content  //(count(Auth::user()->isAdmin)>0 )   -->
         @if(Session()->has('status'))
           <div class="alert alert-success">
@@ -14,7 +16,7 @@
           </div>
         @endif
 
-        <table class="table table-striped table-sm">
+        <table class="table table-striped">
               <thead>
                 <tr>
                   <th>ID</th>
@@ -53,6 +55,6 @@
         </table>
         </div>
         <!-- end content -->
-
+</div>
           
 @endsection

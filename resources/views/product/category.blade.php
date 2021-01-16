@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-<hr>
+<div class="clearfix">
         @if(Session()->has('status'))
           <div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert">X</button>
@@ -10,9 +10,9 @@
           </div>
         @endif
         <a href="/product/category/create" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i> Create new category</a>
-        <br />        
-        <table class="table table-bordered">
+        <table class="table table-striped">
           <thead>
+
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Category</th>
@@ -37,8 +37,9 @@
                 </td>
               </tr>
             @endforeach
+            <tr><td colspan=4 class="text-center"></td></tr>
           </tbody>
-        </table>
+        </table> 
         {{$categories->links()}}
-      
+        </div>
 @endsection
