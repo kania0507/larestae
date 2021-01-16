@@ -154,4 +154,19 @@ class ProductController extends Controller
         Session()->flash('status', $productName. ' is deleted successfully');
         return redirect('/product');
     }
+
+    /**
+     * Display a listing of the resource without a view.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getProducts()
+    {
+
+        $categories = ProductCategory::all();
+
+        $products = Product::paginate(10);
+        return $products;
+    }
+
 }
