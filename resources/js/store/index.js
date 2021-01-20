@@ -1,87 +1,62 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
-import * as types from './mutation-types'
+import Vuex from 'vuex' 
+import axios from 'axios'
 
 Vue.use(Vuex)
 
 const debug = process.env.NODE_ENV !== 'production'
 
 // mutations
-const mutations = {
+const mutations = { 
+    
 
-  [types.ADD_TO_CART] (state, { id }) {
-      const record = state.added.find(p => p.id === id)
+  ADD_Item(state, id) {
+    state.StoreCart.push(id);
+  },
+ 
 
-      if (!record) {
-        state.added.push({
-          id,
-          quantity: 1
-        })
-      } else {
-        record.quantity++
-      }
+  addToCart(state, item) {
+    let found = state.StoreCart.find(product => product.id == item.id);
+
+    if (found) {
+        found.quantity ++;
+        found.totalPrice = found.quantity * found.price;
+    } else {
+        state.StoreCart.push(item);
+
+        Vue.set(item, 'quantity', 1);
+        Vue.set(item, 'totalPrice', +item.price);
     }
+
+    state.cartCount++;
+  }
+  
 }
 
-// initial state
-const state = {
-    added: [],
-    all: [
-      {
-        id: 'cc919e21-ae5b-5e1f-d023-c40ee669520c',
-        name: 'COBOL 101 vintage',
-        description: 'Learn COBOL with this vintage programming book',
-        price: 399
-      },
-      {
-        id: 'bcd755a6-9a19-94e1-0a5d-426c0303454f',
-        name: 'Sharp C2719 curved TV',
-        description: 'Watch TV like never before with the brand new curved screen technology',
-        price: 1995
-      },
-      {
-        id: '727026b7-7f2f-c5a0-ace9-cc227e686b8e',
-        name: 'Remmington X mechanical keyboard',
-        description: 'Excellent for gaming and typing, this Remmington X keyboard ' +
-          'features tactile, clicky switches for speed and accuracy',
-        price: 595
-      }
-    ]
-  }
-  
-  // getters
-  const getters = {
-    allProducts: state => state.all, // would need action/mutation if data fetched async
-    getNumberOfProducts: state => (state.all) ? state.all.length : 0,
-    cartProducts: state => {
-      return state.added.map(({ id, quantity }) => {
-        const product = state.all.find(p => p.id === id)
-  
-        return {
-          name: product.name,
-          price: product.price,
-          quantity
-        }
-      })
-    }
-  }
-  
-  // actions
-  const actions = {
-    addToCart({ commit }, product){
-      commit(types.ADD_TO_CART, {
-        id: product.id
-      })
-    }
-  }
 
-// one store for entire application
-export default new Vuex.Store({
+// initial state
+const state = { 
+    
+  StoreCart: [], cartCount: 0
+}
+
+// getters
+const getters = {  
+  StoreCart: (state) => state.StoreCart,
+
+}
+
+// actions
+const actions = {  
+}
   
-    state,
-  strict: debug,
+ 
+export default new Vuex.Store({
+  strict: true,
+  // strict: debug,
+  state,
   getters,
   actions,
   mutations
-  
+
 })

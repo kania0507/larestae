@@ -8,8 +8,7 @@ import Hello from './views/Hello'
 //import Home from './views/Home'
 import Order from './views/Order'
 import Cart from './components/Cart.vue'
-import Product from './components/Product.vue'
-
+import Product from './components/Product.vue' 
 
 Vue.use(VueRouter) 
 
@@ -25,7 +24,11 @@ const router = new VueRouter({
     {
         path: '/order', name: 'order', component: Order,
     },
-    { path: '/cart', component: Cart } 
+    { path: '/cart', component: Cart } ,
+
+
+
+
     ],
 });
 
