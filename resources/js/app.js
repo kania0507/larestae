@@ -24,10 +24,7 @@ const router = new VueRouter({
     {
         path: '/order', name: 'order', component: Order,
     },
-    { path: '/cart', component: Cart } ,
-
-
-
+    { path: '/cart', component: Cart }  
 
     ],
 });

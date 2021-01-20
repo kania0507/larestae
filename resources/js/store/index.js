@@ -2,14 +2,15 @@ import Vue from 'vue'
 import Vuex from 'vuex' 
 import axios from 'axios'
 
+let cart = window.localStorage.getItem('cart');
+let cartCount = window.localStorage.getItem('cartCount');
+
 Vue.use(Vuex)
 
 const debug = process.env.NODE_ENV !== 'production'
 
 // mutations
-const mutations = { 
-    
-
+const mutations = {  
   ADD_Item(state, id) {
     state.StoreCart.push(id);
   },
@@ -29,14 +30,33 @@ const mutations = {
     }
 
     state.cartCount++;
+    this.commit('saveCart');
+  },
+
+  removeFromCart(state, item) {
+    let index = state.StoreCart.indexOf(item);
+
+    if (index > -1) {
+        let product = state.StoreCart[index];
+        state.cartCount -= product.quantity;
+
+        state.StoreCart.splice(index, 1);
+    }
+    this.commit('saveCart');
+  },
+
+  // saving to local storage
+  saveCart(state) {
+    window.localStorage.setItem('cart', JSON.stringify(state.cart));
+    window.localStorage.setItem('cartCount', state.cartCount);
   }
   
-}
-
+} 
 
 // initial state
 const state = { 
-    
+  cart: cart ? JSON.parse(cart) : [],
+  cartCount: cartCount ? parseInt(cartCount) : 0,
   StoreCart: [], cartCount: 0
 }
 

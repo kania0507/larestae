@@ -7,7 +7,7 @@
             <th>Name</th>
             <th>Description</th>
             <th>Price</th>
-            <th></th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -15,7 +15,8 @@
             <td>{{myprod.name}}</td>
             <td>{{myprod.description}}</td>
             <td>{{myprod.price}}zł</td>
-            <td><button @click="addToCart(myprod);" class='button is-info'>Add to cart</button></td>
+            <td><button @click="addToCart(myprod);" class='button is-info'>Add to cart</button> 
+            </td>
           </tr>
         </tbody>
     </table>
@@ -23,7 +24,8 @@
      
 <h3>Cart Summary</h3>
 <p><div v-for="item in this.$store.state.StoreCart">{{item.name}}, price: {{item.price}}, 
-  quantity: {{item.quantity}} {{item.totalPrice}}  </div>
+  quantity: {{item.quantity}} {{item.totalPrice}}  
+    <a href="#" class="removeBtnLink"><span class="removeBtn"  title="Remove from cart" @click.prevent="removeFromCart(item)">[X]</span></a> </div>
 Cart couter: {{this.$store.state.cartCount}}, Sum: {{totalPrice}}</p>
 <button @click="checkout">Checkout</button>
   </div>
@@ -56,9 +58,18 @@ export default {
   methods: { 
     addToCart(item) {
         this.$store.commit('addToCart', item);
-        console.log(item); 
+        //console.log(item); 
+    },
+    removeFromCart(item) {
+        this.$store.commit('removeFromCart', item);
     },
     checkout(){
+      let data = {
+        cart: JSON.stringify(this.$store.state.cart)
+      }
+
+      //axios.post('/your-checkout-endpoint', data);
+
       alert('Pay us ' + this.totalPrice + 'zł')
     }
     
@@ -72,3 +83,8 @@ export default {
     
 }
 </script> 
+
+<style>
+.removeBtn { color: red;  } 
+.removeBtnLink  {text-decoration: none;}
+</style>
