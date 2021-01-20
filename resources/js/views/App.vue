@@ -1,12 +1,15 @@
 <template>
   <div id="app" class='container'>
+      <img src= "../assets/logo.png" class="logo" />
     <nav-bar></nav-bar>
-    <router-view></router-view> 
+    
+    <router-view></router-view>
+    
   </div>
 </template>
 
 <script>
-import NavBar from   '../components/NavBar.vue' 
+import NavBar from   '../components/NavBar.vue'    
 
 export default {
   name: 'app',
@@ -18,3 +21,8 @@ export default {
   }
 }
 </script>
+<style>
+.logo {
+  max-height: 50px;
+}
+</style>

@@ -5,9 +5,10 @@ import store from './store/index.js'
 
 import App from './views/App'
 import Hello from './views/Hello'
-//import Home from './views/Home'
+import Home from './views/Home'
 import Order from './views/Order'
 import Cart from './components/Cart.vue'
+import Contact from './components/Contact.vue' 
 import Product from './components/Product.vue' 
 
 Vue.use(VueRouter) 
@@ -16,7 +17,7 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
     {
-        path: '/', name: 'home', component: Product // Home
+        path: '/', name: 'home', component:  Home//Product
     },
     {
         path: '/hello', name: 'hello', component: Hello,
@@ -24,7 +25,8 @@ const router = new VueRouter({
     {
         path: '/order', name: 'order', component: Order,
     },
-    { path: '/cart', component: Cart }  
+    { path: '/cart', component: Cart } ,
+    { path: '/contact', component: Contact }  
 
     ],
 });

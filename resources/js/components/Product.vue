@@ -12,7 +12,7 @@
         </thead>
         <tbody>
           <tr v-for="myprod in results" track-by="id">
-            <td>{{myprod.name}}</td>
+            <td><img :src="imgPath + myprod.image" class="prodImg" />{{myprod.name}}</td>
             <td>{{myprod.description}}</td>
             <td>{{myprod.price}}zł</td>
             <td><button @click="addToCart(myprod);" class='button is-info'>Add to cart</button> 
@@ -41,7 +41,7 @@ export default {
   data () {
     return {
       results: null,
-      //summ: 0
+      imgPath: '/images/product_images/'
     }
   },
   computed: { 
@@ -87,4 +87,5 @@ export default {
 <style>
 .removeBtn { color: red;  } 
 .removeBtnLink  {text-decoration: none;}
+.prodImg { max-height: 50px}
 </style>
