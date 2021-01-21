@@ -4,15 +4,15 @@
       <div class="col-md-2 row-me">
         <img src= "../assets/logo.png" class="logo" />
       </div>
-      <div class="col-md-6 row-me">
+      <div class="col-md-10 row-me pull-right"  >
         <nav-bar></nav-bar>
       </div>
-      <div class="col-md-4 row-me pull-right">
-        <button class="btn btn-success">Zamów online</button>
-      </div>
+      <!--<div class="col-md-4 row-me pull-right"> 
+        <div class="display-inline"><button class="btn btn-success">Zamów online</button></div>
+      </div>-->
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="content">
           <router-view></router-view>
       </div>
       </div>
@@ -35,15 +35,40 @@ export default {
 </script>
 <style>
 .logo {
-  max-height: 50px;
+  max-height: 40px;
 }
 .row-me {
   display: inline-block;
 }
 .top-bar {
   padding: 2%;
+  background-color: #151d25;
+  color: white;
+  text-transform: upper;
+
+  
 }
+nav a {
+    color: white;
+    
+  }
+  
 .pull-right {
   text-align: right;
 }
+.img_nav {
+  background-color: silver;
+  max-height: 40px;
+} 
+.display-inline {
+  display: inline;
+}
+.navbar-container {
+  float: right;
+  padding-right: 5em;
+}
+.content {
+  width: 100%;
+}
+
 </style>

@@ -84,4 +84,10 @@ class CategoryController extends Controller
     {
         //
     }
+
+    // get categories 
+    public function getCategories(){
+        $categories = ProductCategory::all();
+        return $categories;
+    }
 }

@@ -1,0 +1,28 @@
+ 
+.removeBtnLink  {text-decoration: none;}
+.prodImg { max-height: 50px}
+.table {
+    table-layout: fixed;
+    word-wrap: break-word; 
+}
+ .marginit-left {
+      width: 25px;
+    height: 25px;
+    font-weight: 700;  border: 1px solid #333; border-radius: 50%;
+    padding-left: 5px; padding-right: 5px;  background-color: white; z-index: 10;
+    
+    margin-left: -10px;
+    margin-top: -10px;
+    
+    color: #000; 
+    
+    }
+.modal-content {
+      padding: 2%; max-width: 75%; 
+    }
+.cart-summary-line {
+      border-bottom: 1px solid red;
+    }
+.no-underline:hover {
+      text-decoration: none;
+    }

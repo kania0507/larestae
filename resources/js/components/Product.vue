@@ -1,7 +1,26 @@
 <template>
-  <div>
-    <p class="pull-right">Cart couter: {{this.$store.state.cartCount}}, Sum: {{totalPrice}}zł</p>
-    <h2 class="title">Menu</h2>  
+  <div><!-- @mouseover="hover = true"
+    @mouseleave="hover = false" -->
+    <p class="pull-right " data-toggle="modal" data-trigger="hover" data-target="#basicModal"  @click="hover? hover=false : hover=true" title="Click to show cart."><a href="#" class="no-underline"><img src="/images/cart.svg" class="img_nav" />
+      <span class="marginit-left">{{this.$store.state.cartCount}}</span> Sum: {{totalPrice}}zł</a></p>
+    <h3 class="title">Menu</h3>  
+<Categories v-on:notify="show = true" ></Categories><!-- :username="user.username" @changeUsername="user.username = 'new name'" -->
+    
+<div   id="basicModal" role="dialog" v-if="hover" >
+    <div class="modal-content ">
+      <p class="pull-right" @click="hover? hover=false : hover=true"><a href="#" title="Hide cart">[x]</a></p>
+         <h3>Cart Summary</h3>
+<p><div v-for="item in this.$store.state.StoreCart" class="cart-summary">{{item.quantity}} {{item.name}},  {{item.totalPrice}} zł 
+   <!-- {{item.price}} -->
+    <a href="#" class="removeBtnLink"><span class="removeBtn btn btn-danger"  title="Remove from cart" @click.prevent="removeFromCart(item)">[X]</span></a> </div>
+    <span class="cart-summary-line">&nbsp;</span>
+<!-- Cart couter: {{this.$store.state.cartCount}},--> <b>Total: {{totalPrice}}zł</b></p>
+<button @click="checkout" class="btn btn-success">Checkout</button>
+
+    </div>
+</div>
+
+
       <table class="table is-striped">
         <thead>
           <tr>
@@ -16,7 +35,7 @@
         <tbody>
           <tr v-for="(myprod, index) in results" track-by="id" :key="index">
             <th scope="row">{{index+1}}</th>
-            <td><img :src="imgPath + myprod.image" class="prodImg" /></td>
+            <td><img :src="imgPath + myprod.image" class="prodImg img-thumbnail" /></td>
             <td>{{myprod.name}}</td>
             <td>{{myprod.description}}</td>
             <td>{{myprod.price}}zł</td>
@@ -27,12 +46,11 @@
     </table>
       
      
-<h3>Cart Summary</h3>
-<p><div v-for="item in this.$store.state.StoreCart">{{item.name}}, price: {{item.price}}, 
-  quantity: {{item.quantity}} {{item.totalPrice}}  
-    <a href="#" class="removeBtnLink"><span class="removeBtn btn btn-danger"  title="Remove from cart" @click.prevent="removeFromCart(item)">[X]</span></a> </div>
-Cart couter: {{this.$store.state.cartCount}}, Sum: {{totalPrice}}</p>
-<button @click="checkout">Checkout</button>
+
+
+
+
+
   </div>
 </template>
 
@@ -40,13 +58,17 @@ Cart couter: {{this.$store.state.cartCount}}, Sum: {{totalPrice}}</p>
 import axios from 'axios'
 import { mapGetters, mapActions } from 'vuex'
 import store from '../store/index.js'
+import Categories from   '../components/Categories.vue'  
 
 export default {
-  name: 'app', 
+  name: 'product', 
+  components: { Categories},
   data () {
     return {
       results: null,
-      imgPath: '/images/product_images/'
+      imgPath: '/images/product_images/',
+      hover: false,
+      show: false
     }
   },
   computed: { 
@@ -76,13 +98,22 @@ export default {
       //axios.post('/your-checkout-endpoint', data);
 
       alert('Pay us ' + this.totalPrice + 'zł')
+    },
+    getProductsByCategory(id){
+       axios.get("'/getProductsByCategory'+id")
+      .then(response => {this.results = response.data.data; //console.log(response.data) 
+      }
+       );
     }
     
   },
   mounted() {
     axios.get("/getProducts")
-      .then(response => {this.results = response.data.data; console.log(response.data) }
+      .then(response => {this.results = response.data.data; //console.log(response.data) 
+      }
        );
+
+      
        
   }  
     
@@ -90,11 +121,6 @@ export default {
 </script> 
 
 <style>
-.removeBtn { color: red;  } 
-.removeBtnLink  {text-decoration: none;}
-.prodImg { max-height: 50px}
-.table {
-    table-layout: fixed;
-    word-wrap: break-word;
-}
+  @import  "../../sass/frontend/product.scss";
+ 
 </style>

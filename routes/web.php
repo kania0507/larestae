@@ -35,6 +35,9 @@ Route::middleware(['auth', 'verifyAdmin'])->group(function(){
 Auth::routes(['register'=>false]);
 
 
-Route::get('getProducts', 'Product\ProductController@getProducts');
+Route::get('/getProducts', 'Product\ProductController@getProducts');
+Route::get('/getCategories', 'Product\CategoryController@getCategories');
+Route::get('/getProductsByCategory/{id}', 'Product\ProductController@getProductsByCategory');
+
 
 Route::get('/{any}', 'SpaController@index')->where('any', '.*');

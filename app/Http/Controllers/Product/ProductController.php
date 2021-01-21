@@ -169,4 +169,12 @@ class ProductController extends Controller
         return $products;
     }
 
+    public function getProductsByCategory($id){
+        //$products = ProductCategory::with('products')->where('category_id',$slug)->get();
+        // $products = Product::with('products')->where('category_id',$id)->get();
+        $products = Product::where('category_id',$id)->get();
+        // Post::where('id', $id);
+        return $products;
+    }
+
 }

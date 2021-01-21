@@ -3,13 +3,15 @@
     
       <nav>
         <router-link class="spacing" v-for="routes in links" 
-        v-bind:key="routes.id" :to="`${routes.page}`">{{routes.text}}</router-link>
-      </nav>
-  
+        v-bind:key="routes.id" :to="`${routes.page}`">{{routes.text}} </router-link> 
+      </nav> 
+      <div class="social-icons">F T I</div>
+      
   </div>
 </template>
 
 <script> 
+
 export default {
   name: 'NavBar', 
   data() {
@@ -44,8 +46,19 @@ export default {
 <style>
 .spacing {
   margin-right: 10px;
+  text-transform: uppercase;
 }
 .navbar-container {
   display: flex;
 }
+nav a::after {
+    margin-left: 1em;
+    content: "-";
+    color: white;
+  }
+  nav a:hover {
+    color: silver;
+    text-decoration: none;
+  }
+
 </style>
