@@ -1,31 +1,38 @@
 <template>
-  <div>
-    <nav>
-      <router-link class="spacing" v-for="routes in links" 
-      v-bind:key="routes.id" :to="`${routes.page}`">{{routes.text}}</router-link>
-    </nav>
+  <div class="navbar-container">
+    
+      <nav>
+        <router-link class="spacing" v-for="routes in links" 
+        v-bind:key="routes.id" :to="`${routes.page}`">{{routes.text}}</router-link>
+      </nav>
+  
   </div>
 </template>
 
-<script>
+<script> 
 export default {
-  name: 'NavBar',
+  name: 'NavBar', 
   data() {
     return {
       links: [
         
         {
           id: 1,
-          text: 'Home',
+          text: 'Start',
           page:'/'
         },
-        {
+         {
           id: 2,
+          text: 'Menu',
+          page:'/menu'
+        },
+        {
+          id: 3,
           text: 'Order',
           page:'/order'
         },
         {
-          id: 3,
+          id: 4,
           text: 'Contact',
           page:'/contact'
         }
@@ -37,5 +44,8 @@ export default {
 <style>
 .spacing {
   margin-right: 10px;
+}
+.navbar-container {
+  display: flex;
 }
 </style>

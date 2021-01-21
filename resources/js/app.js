@@ -11,6 +11,9 @@ import Cart from './components/Cart.vue'
 import Contact from './components/Contact.vue' 
 import Product from './components/Product.vue' 
 
+ 
+
+
 Vue.use(VueRouter) 
 
 const router = new VueRouter({
