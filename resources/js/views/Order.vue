@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="order">
+    <div class='draw-pizza'></div>
     <h2>Order a pizza</h2>
     <form action="#" @submit.prevent="createOrder()">
       <div class="form-group">
@@ -65,3 +66,9 @@ import axios from '../../../node_modules/axios'
     }
   }
 </script>
+<style>
+.order {
+  min-height:75vh;
+  padding: 2% 10% 2% 10%; 
+}
+</style>

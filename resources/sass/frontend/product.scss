@@ -37,3 +37,12 @@
 .no-underline:hover {
       text-decoration: none;
     }
+    .draw-pizza {
+      background-image: url('/images/pizza-draw.png');
+      background-size: contain; 
+       background-position: left 5%;
+       background-repeat: repeat-x;
+       height: 5vh; 
+       margin-bottom: 5%;
+        
+  }

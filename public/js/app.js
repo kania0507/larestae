@@ -2041,13 +2041,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2169,6 +2162,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//
 //
 //
 //
@@ -2479,6 +2473,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'hello',
   components: {}
@@ -2532,6 +2529,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/axios */ "./node_modules/axios/index.js");
 /* harmony import */ var _node_modules_axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_axios__WEBPACK_IMPORTED_MODULE_0__);
+//
 //
 //
 //
@@ -2645,6 +2643,25 @@ exports.push([module.i, "/*!\n * Bootstrap v4.5.3 (https://getbootstrap.com/)\n 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Contact.vue?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Contact.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.contact{\n    min-height:75vh;\n    padding: 2% 10% 2% 10%;\n}\n.draw-pizza {\n      background-image: url('/images/pizza-draw.png');\n      background-size: contain; \n       background-position: left 5%;\n       background-repeat: repeat-x;\n       min-height: 10vh; \n       height: 5vh; \n       margin-bottom: 5%;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NavBar.vue?vue&type=style&index=0&lang=css&":
 /*!************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NavBar.vue?vue&type=style&index=0&lang=css& ***!
@@ -2715,7 +2732,26 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Mo
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);", ""]);
 
 // module
-exports.push([module.i, "\n.hero-container {\r\n    \r\n    max-width: 100%;\r\n    background-image: url('/images/pizza-to.jpg');\r\n    background-size: 100% 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: bottom left;\r\n    min-height: 95vh;\r\n    position: relative; \r\n    padding-left: 35%;\r\n    padding-right: 35%;\r\n    padding-top: 10%;\r\n    padding-bottom: auto;\r\n    z-index:0;\n}\n.hero-header {\r\n        font-size: 5.31em;\r\n        color: #ffffff;\r\n        font-weight: 400; \r\n        font-family: 'Lobster', cursive;\n}\n.lead {\r\n        \r\n        font-size: 1.25em;\r\n        letter-spacing: 4px;\r\n        line-height: 1.875em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: 'Montserrat', sans-serif;\r\n        text-align: center;\n}\n.centered {\r\n        padding-left: auto;\r\n        padding-right: auto;\r\n        \r\n        text-align: center;\n}\n.gray-background {\r\n        background-color: #333;\r\n        opacity: 0.9;\r\n        padding: 5%;\n}\n.spaner {\r\n        color: white;\r\n        padding: 1%;\n}\n.white {\r\n        color: white;\n}\n.btn-gray {\r\n        background-color: #151d25;\r\n        font-size: 0.94em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Montserrat\";\r\n        text-align: center;\r\n        text-transform: uppercase;\r\n        border-radius: 0;\r\n        min-width: 12vw;\n}\n.btn-gray:hover {\r\n        background-color: green;\r\n        color: white;\n}\r\n\r\n    /* ABOUT CONTAINER*/\n.about-container { \r\n         min-height: 40vh;\r\n         width: 100%;\r\n        z-index: 10;\r\n        position: relative; \r\n        padding-left: 25%;\r\n        padding-right: 25%;\r\n        text-align:center;\r\n        margin-top: -5vh;\r\n        \r\n        display: flex;\n}\n.about-book {\r\n        width: 25vw;\r\n        height : 100%;\r\n        min-height: 40vh;\r\n       \r\n        text-align:center; \r\n        padding: 5%;\n}\n.about-book-left {\r\n        background-image: url('/images/baker.jpg');\r\n         background-size: cover;\r\n         float: left; \r\n         height: 100%;\r\n         width: 50%;\r\n\r\n         background-repeat: no-repeat; background-color: black;\n}\n.about-book-right {\r\n         \r\n        float: left; \r\n        width: 50%;\r\n        height: 100%;\r\n        background-color: white;\r\n\r\n         background-image: url('/images/pizza-draw.png');\r\n         background-size: 10%;\r\n         background-position: center 5%;\r\n         background-repeat: no-repeat;\n}\n.about-header {\r\n        font-size: 2.1875em;\r\n        color: #28374b;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        margin-top: 2%;\n}\r\n\r\n    /* QUOTE CONTAINER*/\n.quote-container {\r\n        min-height: 60vh;\r\n        width: 100%;\r\n        z-index: 1;\r\n        background-color: #999;\r\n        margin-top: -5vh;\r\n        background-image: url('/images/bar.jpg') ;\r\n        background-size: cover;\r\n        background-position: right bottom;\r\n    position: relative;\n}\n.layer {\r\n        background-color: rgba(230, 232, 230, 0.3);\r\n        position: absolute;\r\n        top: 0;\r\n        left: 0;\r\n        width: 100%;\r\n        height: 100%;\r\n        z-index: 0;\n}\n.quote-text {\r\n        padding-left: 30%;\r\n        padding-right: 30%;\r\n        padding-top: 20%;\r\n        z-index: 2;\r\n        text-align:center;\n}\n.quote-header {\r\n        text-transform: uppercase;\r\n        font-size: 1.25em;\r\n        letter-spacing: 4px;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Montserrat\";\r\n        text-align: center;\n}\n.quote-author {\r\n        font-size: 1.25em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\n}\n.draw-pizza {\r\n        background-image: url('/images/pizza-draw.png');\r\n         background-size: 6%;\r\n         background-position: center 5%;\r\n         background-repeat: no-repeat;\n}\r\n\r\n    /* MENU CONTAINER*/\n.menu-container {\r\n        min-height: 90vh;\r\n        width: 100%;\r\n        background-color: white;\r\n        padding-left: 20%;\r\n        padding-right: 20%;\r\n        padding-top: 5%;\r\n        padding-bottom: 5%;\r\n        text-align: center;\n}\n.menu-header {\r\n        font-size: 2.1875em;\r\n        color: #28374b;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        padding-top: 5%;\r\n        padding-bottom: 5%;\n}\n.menu-grid {\r\n        width: 100%;\r\n        display: grid;\r\n        grid-template-columns: 1fr 1fr 1fr 1fr;\r\n        grid-template-rows: 1fr 1fr 1fr;\r\n        gap: 0px 0px;\r\n  \r\n        grid-template-areas:\r\n            \"a1 a2 a3 a4\"\r\n            \"b1 b2 b3 b4\"\r\n            \"c1 c2 c3 c4\";\r\n            padding-bottom: 5%;\n}\n.menu-grid div {\r\n        min-width: 100px;\r\n        min-height: 20vh;\r\n        padding: 5%;\n}\n.a1, .menu-img {\r\n        background-image: url('/images/product_images/011520211839026001e14689d3a.jpg') ;\r\n        background-size: cover;\r\n        background-position: center center;\n}\n.menu-bg, .menu-grid-text {\r\n        background-color: #9fb0a5;\n}\n.menu-h{\r\n        font-size: 1.4375em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        text-align: center;\r\n        padding: 5%;\n}\n.menu-p {\r\n        \r\n        font-size: 0.8125em;\r\n        letter-spacing: 1px;\r\n        line-height: 1.5625em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Montserrat\";\r\n        text-align: center;\n}\n.menu-pp {\r\n        font-size: 1.4375em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        text-align: center;\n}\n.a3 {\r\n        background-image: url('/images/product_images/011520211840066001e186baf43.jpg') ;\n}\r\n\r\n    /* VIDEO CONTAINER Seasoning Pizza at Italian Restaurant.mp4 */\n.video-container {\r\n        max-width: 100vw;\r\n        height: 60vh;\n}\n#myVideo {\r\n        position: relative;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    width: 100%;\r\n    height: 100%;\n}\r\n\r\n    /* Add some content at the bottom of the video/page */\n.video-container-content {\r\n  position: absolute;\r\n  height: 50vh;\r\n  text-align: center;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  display: none;\n}\r\n\r\n/* Style the button used to pause/play the video */\n#myBtn {\r\n  width: 200px;\r\n  font-size: 18px;\r\n  padding: 10px;\r\n  border: none;\r\n  background: #000;\r\n  color: #fff;\r\n  cursor: pointer;\n}\n#myBtn:hover {\r\n  background: #ddd;\r\n  color: black;\n}\r\n\r\n/* NEWSLETTER CONTAINER*/\n.newsletter-container {\r\n    background-color: white;\r\n    \r\n    padding: 5% 30% 10% 30%;\r\n    text-align: center;\n}\n.newsletter-header {\r\n    font-size: 2.1875em;\r\n    color: #28374b;\r\n    font-weight: 400;\r\n    font-family: \"Lobster\";\r\n    padding-top: 5%;\r\n    padding-bottom: 5%;\n}\n.newsletter-p {\r\n    font-size: 0.9375em;\r\n    letter-spacing: 2px;\r\n    line-height: 1.75em;\r\n    color: #28374b;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\r\n    text-align: center;\n}\n.newsletter {\r\npadding: 80px 0;\r\nbackground: #19beda;\n}\n.newsletter .content {\r\nmax-width: 650px;\r\nmargin: 0 auto;\r\ntext-align: center;\r\nposition: relative;\r\nz-index: 2;\n}\n.newsletter .content h2 {\r\ncolor: #243c4f;\r\nmargin-bottom: 40px;\n}\n.newsletter .content .form-control {\r\nheight: 50px;\r\nborder-color: #ffffff;\r\nborder-radius:0;\n}\n.newsletter .content.form-control:focus {\r\nbox-shadow: none;\r\nborder: 1px solid #243c4f;\n}\n.newsletter .content .btn {\r\nmin-height: 50px; \r\nborder-radius:0;\r\nbackground: #243c4f;\r\ncolor: #fff;\r\nfont-weight:600;\n}\r\n\r\n/* FOOTER CONTAINER */\n.footer-container {\r\n    background-color: #27364a;\r\n    min-height: 15vh;\r\n    padding: 5% 20% 10% 20%;\r\n    color: white;\r\n    display: flex;\r\n    justify-content: space-around;\n}\n.footer-container-h {\r\n    font-size: 1.5625em;\r\n    letter-spacing: 3px;\r\n    line-height: 2.6875em;\r\n    color: #ffffff;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\r\n    text-align: left;\r\n    text-transform: uppercase;\n}\n.footer-location-h {\r\n    text-transform: uppercase;\r\n    font-size: 1.5625em;\r\n    letter-spacing: 3px;\r\n    line-height: 2.6875em;\r\n    color: #ffffff;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\r\n    text-align: left;\n}\n.footer-location-p {\r\n    display: flex;\r\n    max-width: 25vw;\n}\r\n\r\n\r\n/* FOOTER BOTTOM CONTAINER */\n.footer-bottom-container {\r\n    background-color: #000;\r\n    min-height: 10vh;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    color: white;\r\n    padding: 2% 20% 2% 20%;\n}\n.footer-bottom-left {\r\n    font-size: 0.9375em;\r\n    letter-spacing: 2px;\r\n    line-height: 1.875em;\r\n    color: #ffffff;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\n}\n.footer-bottom-right {\r\n    text-align: right;\n}\r\n", ""]);
+exports.push([module.i, "\n.hero-container {\r\n    \r\n    max-width: 100%;\r\n    background-image: url('/images/pizza-to.jpg');\r\n    background-size: 100% 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: bottom left;\r\n    min-height: 95vh;\r\n    position: relative; \r\n    padding-left: 35%;\r\n    padding-right: 35%;\r\n    padding-top: 10%;\r\n    padding-bottom: auto;\r\n    z-index:0;\n}\n.hero-header {\r\n        font-size: 5.31em;\r\n        color: #ffffff;\r\n        font-weight: 400; \r\n        font-family: 'Lobster', cursive;\n}\n.lead {\r\n        \r\n        font-size: 1.25em;\r\n        letter-spacing: 4px;\r\n        line-height: 1.875em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: 'Montserrat', sans-serif;\r\n        text-align: center;\n}\n.centered {\r\n        padding-left: auto;\r\n        padding-right: auto;\r\n        \r\n        text-align: center;\n}\n.gray-background {\r\n        background-color: #333;\r\n        opacity: 0.9;\r\n        padding: 5%;\n}\n.spaner {\r\n        color: white;\r\n        padding: 1%;\n}\n.white {\r\n        color: white;\n}\n.btn-gray {\r\n        background-color: #151d25;\r\n        font-size: 0.94em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Montserrat\";\r\n        text-align: center;\r\n        text-transform: uppercase;\r\n        border-radius: 0;\r\n        min-width: 12vw;\n}\n.btn-gray:hover {\r\n        background-color: green;\r\n        color: white;\n}\r\n\r\n    /* ABOUT CONTAINER*/\n.about-container { \r\n         min-height: 40vh;\r\n         width: 100%;\r\n        z-index: 10;\r\n        position: relative; \r\n        padding-left: 25%;\r\n        padding-right: 25%;\r\n        text-align:center;\r\n        margin-top: -5vh;\r\n        \r\n        display: flex;\n}\n.about-book {\r\n        width: 25vw;\r\n        height : 100%;\r\n        min-height: 40vh;\r\n       \r\n        text-align:center; \r\n        padding: 5%;\n}\n.about-book-left {\r\n        background-image: url('/images/baker.jpg');\r\n         background-size: cover;\r\n         float: left; \r\n         height: 100%;\r\n         width: 50%;\r\n\r\n         background-repeat: no-repeat; background-color: black;\n}\n.about-book-right {\r\n         \r\n        float: left; \r\n        width: 50%;\r\n        height: 100%;\r\n        background-color: white;\n}\n.about-header {\r\n        font-size: 2.1875em;\r\n        color: #28374b;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        padding-top: 3%;\r\n        padding-bottom: 3%;\n}\r\n\r\n    /* QUOTE CONTAINER*/\n.quote-container {\r\n        min-height: 60vh;\r\n        width: 100%;\r\n        z-index: 1;\r\n        background-color: #999;\r\n        margin-top: -5vh;\r\n        background-image: url('/images/bar.jpg') ;\r\n        background-size: cover;\r\n        background-position: right bottom;\r\n    position: relative;\n}\n.layer {\r\n        background-color: rgba(230, 232, 230, 0.3);\r\n        position: absolute;\r\n        top: 0;\r\n        left: 0;\r\n        width: 100%;\r\n        height: 100%;\r\n        z-index: 0;\n}\n.quote-text {\r\n        padding-left: 30%;\r\n        padding-right: 30%;\r\n        padding-top: 20%;\r\n        z-index: 2;\r\n        text-align:center;\n}\n.quote-header {\r\n        text-transform: uppercase;\r\n        font-size: 1.25em;\r\n        letter-spacing: 4px;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Montserrat\";\r\n        text-align: center;\n}\n.quote-author {\r\n        font-size: 1.25em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\n}\n.draw-pizza-once {\r\n        background-image: url('/images/pizza-draw.png');\r\n         background-size: contain;\r\n         background-position: center 5%;\r\n         background-repeat: no-repeat;\r\n         height: 8vh; \r\n        margin-bottom: 2%;\n}\r\n\r\n    /* MENU CONTAINER*/\n.menu-container {\r\n        min-height: 90vh;\r\n        width: 100%;\r\n        background-color: white;\r\n        padding-left: 20%;\r\n        padding-right: 20%;\r\n        padding-top: 5%;\r\n        padding-bottom: 5%;\r\n        text-align: center;\n}\n.menu-header {\r\n        font-size: 2.1875em;\r\n        color: #28374b;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        padding-top: 5%;\r\n        padding-bottom: 5%;\n}\n.menu-grid {\r\n        width: 100%;\r\n        display: grid;\r\n        grid-template-columns: 1fr 1fr 1fr 1fr;\r\n        grid-template-rows: 1fr 1fr 1fr;\r\n        gap: 0px 0px;\r\n  \r\n        grid-template-areas:\r\n            \"a1 a2 a3 a4\"\r\n            \"b1 b2 b3 b4\"\r\n            \"c1 c2 c3 c4\";\r\n            padding-bottom: 5%;\n}\n.menu-grid div {\r\n        min-width: 100px;\r\n        min-height: 20vh;\r\n        padding: 5%;\n}\n.a1, .menu-img {\r\n        background-image: url('/images/product_images/011520211839026001e14689d3a.jpg') ;\r\n        background-size: cover;\r\n        background-position: center center;\n}\n.menu-bg, .menu-grid-text {\r\n        background-color: #9fb0a5;\n}\n.menu-h{\r\n        font-size: 1.4375em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        text-align: center;\r\n        padding: 5%;\n}\n.menu-p {\r\n        \r\n        font-size: 0.8125em;\r\n        letter-spacing: 1px;\r\n        line-height: 1.5625em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Montserrat\";\r\n        text-align: center;\n}\n.menu-pp {\r\n        font-size: 1.4375em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        text-align: center;\n}\n.a3 {\r\n        background-image: url('/images/product_images/011520211840066001e186baf43.jpg') ;\n}\r\n\r\n    /* VIDEO CONTAINER Seasoning Pizza at Italian Restaurant.mp4 */\n.video-container {\r\n        max-width: 100vw;\r\n        height: 60vh;\n}\n#myVideo {\r\n        position: relative;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    width: 100%;\r\n    height: 100%;\n}\r\n\r\n    /* Add some content at the bottom of the video/page */\n.video-container-content {\r\n  position: absolute;\r\n  height: 50vh;\r\n  text-align: center;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  display: none;\n}\r\n\r\n/* Style the button used to pause/play the video */\n#myBtn {\r\n  width: 200px;\r\n  font-size: 18px;\r\n  padding: 10px;\r\n  border: none;\r\n  background: #000;\r\n  color: #fff;\r\n  cursor: pointer;\n}\n#myBtn:hover {\r\n  background: #ddd;\r\n  color: black;\n}\r\n\r\n/* NEWSLETTER CONTAINER*/\n.newsletter-container {\r\n    background-color: white;\r\n    \r\n    padding: 5% 30% 10% 30%;\r\n    text-align: center;\n}\n.newsletter-header {\r\n    font-size: 2.1875em;\r\n    color: #28374b;\r\n    font-weight: 400;\r\n    font-family: \"Lobster\";\r\n    padding-top: 5%;\r\n    padding-bottom: 5%;\n}\n.newsletter-p {\r\n    font-size: 0.9375em;\r\n    letter-spacing: 2px;\r\n    line-height: 1.75em;\r\n    color: #28374b;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\r\n    text-align: center;\n}\n.newsletter {\r\npadding: 80px 0;\r\nbackground: #19beda;\n}\n.newsletter .content {\r\nmax-width: 650px;\r\nmargin: 0 auto;\r\ntext-align: center;\r\nposition: relative;\r\nz-index: 2;\n}\n.newsletter .content h2 {\r\ncolor: #243c4f;\r\nmargin-bottom: 40px;\n}\n.newsletter .content .form-control {\r\nheight: 50px;\r\nborder-color: #ffffff;\r\nborder-radius:0;\n}\n.newsletter .content.form-control:focus {\r\nbox-shadow: none;\r\nborder: 1px solid #243c4f;\n}\n.newsletter .content .btn {\r\nmin-height: 50px; \r\nborder-radius:0;\r\nbackground: #243c4f;\r\ncolor: #fff;\r\nfont-weight:600;\n}\r\n\r\n/* FOOTER CONTAINER */\n.footer-container {\r\n    background-color: #27364a;\r\n    min-height: 15vh;\r\n    padding: 5% 20% 10% 20%;\r\n    color: white;\r\n    display: flex;\r\n    justify-content: space-around;\n}\n.footer-container-h {\r\n    font-size: 1.5625em;\r\n    letter-spacing: 3px;\r\n    line-height: 2.6875em;\r\n    color: #ffffff;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\r\n    text-align: left;\r\n    text-transform: uppercase;\n}\n.footer-location-h {\r\n    text-transform: uppercase;\r\n    font-size: 1.5625em;\r\n    letter-spacing: 3px;\r\n    line-height: 2.6875em;\r\n    color: #ffffff;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\r\n    text-align: left;\n}\n.footer-location-p {\r\n    display: flex;\r\n    max-width: 25vw;\n}\r\n\r\n\r\n/* FOOTER BOTTOM CONTAINER */\n.footer-bottom-container {\r\n    background-color: #000;\r\n    min-height: 10vh;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    color: white;\r\n    padding: 2% 20% 2% 20%;\n}\n.footer-bottom-left {\r\n    font-size: 0.9375em;\r\n    letter-spacing: 2px;\r\n    line-height: 1.875em;\r\n    color: #ffffff;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\n}\n.footer-bottom-right {\r\n    text-align: right;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Order.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Order.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.order {\r\n  min-height:75vh;\r\n  padding: 2% 10% 2% 10%;\n}\r\n", ""]);
 
 // exports
 
@@ -2734,7 +2770,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.product-content {\r\n  min-height: 75vh;\r\n  padding-left: 10%;\r\n  padding-right: 10%;\r\n  padding-top: 2%;\r\n  padding-bottom: 2%;\n}\n.removeBtnLink  {text-decoration: none;}\n.prodImg { max-height: 50px}\n.table {\r\n    table-layout: fixed;\r\n    word-wrap: break-word;\n}\n.marginit-left {\r\n      \r\n    font-weight: 700;  \r\n    border: 1px solid #333; \r\n    border-radius: 50%;\r\n    padding-left: 5px; \r\n    padding-right: 5px;  \r\n    background-color: white; \r\n    z-index: 10;\r\n    \r\n    margin-left: -1em;\r\n    margin-top: -10px;\r\n    \r\n    color: #000;\n}\n.modal-content {\r\n      padding: 2%; max-width: 75%;\n}\n.cart-summary-line {\r\n      border-bottom: 1px solid red;\n}\n.no-underline:hover {\r\n      text-decoration: none;\n}", ""]);
+exports.push([module.i, "\n.product-content {\r\n  min-height: 75vh;\r\n  padding-left: 10%;\r\n  padding-right: 10%;\r\n  padding-top: 2%;\r\n  padding-bottom: 2%;\n}\n.removeBtnLink  {text-decoration: none;}\n.prodImg { max-height: 50px}\n.table {\r\n    table-layout: fixed;\r\n    word-wrap: break-word;\n}\n.marginit-left {\r\n      \r\n    font-weight: 700;  \r\n    border: 1px solid #333; \r\n    border-radius: 50%;\r\n    padding-left: 5px; \r\n    padding-right: 5px;  \r\n    background-color: white; \r\n    z-index: 10;\r\n    \r\n    margin-left: -1em;\r\n    margin-top: -10px;\r\n    \r\n    color: #000;\n}\n.modal-content {\r\n      padding: 2%; max-width: 75%;\n}\n.cart-summary-line {\r\n      border-bottom: 1px solid red;\n}\n.no-underline:hover {\r\n      text-decoration: none;\n}\n.draw-pizza {\r\n      background-image: url('/images/pizza-draw.png');\r\n      background-size: contain; \r\n       background-position: left 5%;\r\n       background-repeat: repeat-x;\r\n       height: 5vh; \r\n       margin-bottom: 5%;\n}", ""]);
 
 // exports
 
@@ -3980,6 +4016,35 @@ try {
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Contact.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Contact.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Contact.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Contact.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__);
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1___default.a, options);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1___default.a.locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NavBar.vue?vue&type=style&index=0&lang=css&":
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NavBar.vue?vue&type=style&index=0&lang=css& ***!
@@ -4093,6 +4158,35 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Hello_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1___default.a.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Order.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Order.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Order_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Order.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Order.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Order_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Order_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__);
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Order_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1___default.a, options);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Order_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1___default.a.locals || {});
 
 /***/ }),
 
@@ -4662,14 +4756,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [_vm._v("Contact")])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "contact" }, [
+      _c("div", { staticClass: "draw-pizza" }),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Contact")])
     ])
   }
 ]
@@ -4807,8 +4897,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "product-content" },
+    { staticClass: "product-content " },
     [
+      _c("div", { staticClass: "draw-pizza" }),
+      _vm._v(" "),
       _c(
         "p",
         {
@@ -5132,8 +5224,10 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "lead " }, [_vm._v("You'll Never Put A B")]),
         _vm._v(" "),
-        _c("button", { staticClass: "btn btn-gray white" }, [
-          _vm._v("Our menu")
+        _c("form", { attrs: { action: "/menu" } }, [
+          _c("button", { staticClass: "btn btn-gray white" }, [
+            _vm._v("Our menu")
+          ])
         ])
       ])
     ])
@@ -5146,6 +5240,8 @@ var staticRenderFns = [
       _c("div", { staticClass: "about-book about-book-left " }),
       _vm._v(" "),
       _c("div", { staticClass: "about-book about-book-right" }, [
+        _c("div", { staticClass: "draw-pizza-once" }),
+        _vm._v(" "),
         _c("h3", { staticClass: "about-header" }, [_vm._v("Story of Us")]),
         _vm._v(" "),
         _c("p", [
@@ -5179,7 +5275,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "menu-container" }, [
-      _c("h3", { staticClass: "menu-header draw-pizza" }, [
+      _c("div", { staticClass: "draw-pizza-once" }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "menu-header " }, [
         _vm._v("We Present You Our Menu")
       ]),
       _vm._v(" "),
@@ -5281,7 +5379,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "newsletter-container" }, [
-      _c("h3", { staticClass: "newsletter-header draw-pizza" }, [
+      _c("div", { staticClass: "draw-pizza-once" }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "newsletter-header " }, [
         _vm._v("Stay up to date")
       ]),
       _vm._v(" "),
@@ -5351,7 +5451,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "order" }, [
+    _c("div", { staticClass: "draw-pizza" }),
+    _vm._v(" "),
     _c("h2", [_vm._v("Order a pizza")]),
     _vm._v(" "),
     _c(
@@ -22195,7 +22297,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Contact_vue_vue_type_template_id_4c2584f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Contact.vue?vue&type=template&id=4c2584f6& */ "./resources/js/components/Contact.vue?vue&type=template&id=4c2584f6&");
 /* harmony import */ var _Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Contact.vue?vue&type=script&lang=js& */ "./resources/js/components/Contact.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _Contact_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Contact.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/Contact.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -22203,7 +22307,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Contact_vue_vue_type_template_id_4c2584f6___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Contact_vue_vue_type_template_id_4c2584f6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -22232,6 +22336,20 @@ component.options.__file = "resources/js/components/Contact.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Contact.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Contact.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Contact.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/Contact.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Contact.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Contact.vue?vue&type=style&index=0&lang=css&");
+/* empty/unused harmony star reexport */
 
 /***/ }),
 
@@ -22830,7 +22948,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Order_vue_vue_type_template_id_621856bf___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Order.vue?vue&type=template&id=621856bf& */ "./resources/js/views/Order.vue?vue&type=template&id=621856bf&");
 /* harmony import */ var _Order_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Order.vue?vue&type=script&lang=js& */ "./resources/js/views/Order.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _Order_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Order.vue?vue&type=style&index=0&lang=css& */ "./resources/js/views/Order.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -22838,7 +22958,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Order_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Order_vue_vue_type_template_id_621856bf___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Order_vue_vue_type_template_id_621856bf___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -22867,6 +22987,20 @@ component.options.__file = "resources/js/views/Order.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Order_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Order.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Order.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Order_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/Order.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/views/Order.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Order_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Order.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Order.vue?vue&type=style&index=0&lang=css&");
+/* empty/unused harmony star reexport */
 
 /***/ }),
 

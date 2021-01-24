@@ -1,14 +1,7 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Contact</div>
-
-                    
-                </div>
-            </div>
-        </div>
+    <div class="contact">
+        <div class='draw-pizza'></div>
+        <h3>Contact</h3>
     </div>
 </template>
 
@@ -19,3 +12,19 @@
         }
     }
 </script>
+<style>
+.contact{
+    min-height:75vh;
+    padding: 2% 10% 2% 10%;
+}
+.draw-pizza {
+      background-image: url('/images/pizza-draw.png');
+      background-size: contain; 
+       background-position: left 5%;
+       background-repeat: repeat-x;
+       min-height: 10vh; 
+       height: 5vh; 
+       margin-bottom: 5%;
+        
+  }
+</style>

@@ -1,5 +1,6 @@
 <template>
-  <div class="product-content"> 
+  <div class="product-content "> 
+    <div class='draw-pizza'></div>
     <p class="pull-right " data-toggle="modal" data-trigger="hover" data-target="#basicModal"  @click="hover? hover=false : hover=true" title="Click to show cart."><a href="#" class="no-underline"><img src="/images/cart.svg" class="img_nav" />
       <span class="marginit-left badge badge-light" v-if="this.$store.state.cartCount>0">{{this.$store.state.cartCount}}</span> Sum: {{totalPrice}}zł</a></p>
     <h3 class="title">Menu</h3>  

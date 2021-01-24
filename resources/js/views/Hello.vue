@@ -6,12 +6,15 @@
             <h1 class=" hero-header  ">It's a Food Adventure</h1>
             <span class="spaner  "> - - - - - - - </span>
             <p class="lead ">You'll Never Put A B</p>
-            <button class="btn btn-gray white">Our menu</button>
+            <form action="/menu">
+             <button class="btn btn-gray white">Our menu</button>
+            </form>
         </div>
     </div>
     <div class="about-container ">
         <div class="about-book about-book-left "></div>
         <div class="about-book about-book-right">
+            <div class='draw-pizza-once'></div>
             <h3 class="about-header">Story of Us</h3>
            
             <p>Quisque velit nisi, 
@@ -28,8 +31,8 @@
             <p class="quote-author">John Doe</p>
         </div>
     </div>
-    <div class="menu-container">
-     <h3 class="menu-header draw-pizza">We Present You Our Menu</h3>
+    <div class="menu-container"><div class='draw-pizza-once'></div>
+     <h3 class="menu-header ">We Present You Our Menu</h3>
         <div class="menu-grid">
             <div class=" menu-img"></div>
             <div class="a2 menu-grid-text">
@@ -83,8 +86,8 @@
             <button id="myBtn" onclick="myFunction()">Pause</button>
         </div>
     </div>
-    <div class="newsletter-container">
-        <h3 class="newsletter-header draw-pizza">Stay up to date</h3>
+    <div class="newsletter-container"><div class='draw-pizza-once'></div>
+        <h3 class="newsletter-header ">Stay up to date</h3>
         <p class="newsletter-p">Quisque velit nisi, pretium it latina</p>
         <div class="input-group">
             <input type="email" class="form-control" placeholder="Enter your email">
@@ -217,18 +220,14 @@ export default {
         height: 100%;
         background-color: white;
 
-         background-image: url('/images/pizza-draw.png');
-         background-size: 10%;
-         background-position: center 5%;
-         background-repeat: no-repeat;
-          
     }
     .about-header {
         font-size: 2.1875em;
         color: #28374b;
         font-weight: 400;
         font-family: "Lobster";
-        margin-top: 2%;
+        padding-top: 3%;
+        padding-bottom: 3%;
     }
 
     /* QUOTE CONTAINER*/
@@ -278,11 +277,13 @@ export default {
 
     }
 
-    .draw-pizza {
+    .draw-pizza-once {
         background-image: url('/images/pizza-draw.png');
-         background-size: 6%;
+         background-size: contain;
          background-position: center 5%;
          background-repeat: no-repeat;
+         height: 8vh; 
+        margin-bottom: 2%;
     }
 
     /* MENU CONTAINER*/
