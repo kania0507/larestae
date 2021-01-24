@@ -168,12 +168,13 @@ class ProductController extends Controller
         $products = Product::paginate(10);
         return $products;
     }
-
-    public function getProductsByCategory($id){
-        //$products = ProductCategory::with('products')->where('category_id',$slug)->get();
-        // $products = Product::with('products')->where('category_id',$id)->get();
-        $products = Product::where('category_id',$id)->get();
-        // Post::where('id', $id);
+/**
+     * Display a listing of products by category  without a view.
+     *
+     * 
+* */
+    public function getProductsByCategory($id){ 
+        $products = Product::where('category_id',$id)->get(); 
         return $products;
     }
 

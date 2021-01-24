@@ -57,7 +57,7 @@ nav a::after {
     color: white;
   }
   nav a:hover {
-    color: silver;
+    color: green;
     text-decoration: none;
   }
 

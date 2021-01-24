@@ -1,6 +1,8 @@
 <template>
   <div>
-    <ul><li v-for="category in categories" class="display-inline"><a :href="'/getProductsByCategory/'+category.id" @click="selectedCategory">[{{category.name}}]</a></li> </ul> 
+    <ul><li class="display-inline"><a href="#"  @click="selectedCategory(null)">[ ALL ]</a></li><li v-for="category in categories" class="display-inline">
+      <a href="#"  @click="selectedCategory(category.id)">[ {{category.name}} ]</a><!-- :href="'/getProductsByCategory/'+category.id" -->
+      </li> </ul> 
   </div>
 </template>
 
@@ -11,22 +13,21 @@ export default {
   name: 'categories', 
   data () {
     return {
-        categories: null,
-        id:null
+        categories: null 
     }
   },
   computed: {  
   },
   methods: {  
-    selectedCategory() {
-        this.$emit('selectedCategory')
-    }
+    selectedCategory(id) { 
+        this.cat_id=id;
+        this.$emit('eventname', this.$parent.cat_id=id);   
+    } 
   },
-  mounted() {
-      
+  mounted() { 
     axios.get("/getCategories")
-      .then(response => {this.categories = response.data; console.log(response.data) }
-       );
+      .then(response => {this.categories = response.data;  
+       } );
        
   }  
     

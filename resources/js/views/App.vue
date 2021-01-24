@@ -14,19 +14,22 @@
     <div class="row">
       <div class="content">
           <router-view></router-view>
+          <Footer></Footer>
       </div>
       </div>
+     
   </div>
 </template>
 
 <script>
 import NavBar from   '../components/NavBar.vue'    
+import Footer from   '../components/Footer.vue'   
 
 import "bootstrap/dist/css/bootstrap.min.css"
 export default {
   name: 'app',
   components: {
-    NavBar 
+    NavBar, Footer
   },
   data () {
     return {}
@@ -35,7 +38,7 @@ export default {
 </script>
 <style>
 .logo {
-  max-height: 40px;
+  max-height: 30px;
 }
 .row-me {
   display: inline-block;
@@ -43,14 +46,11 @@ export default {
 .top-bar {
   padding: 2%;
   background-color: #151d25;
-  color: white;
-  text-transform: upper;
-
+  color: white; 
   
 }
 nav a {
-    color: white;
-    
+    color: white; 
   }
   
 .pull-right {
@@ -68,7 +68,8 @@ nav a {
   padding-right: 5em;
 }
 .content {
-  width: 100%;
+  width: 100%; 
+
 }
 
 </style>

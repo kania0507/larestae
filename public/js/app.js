@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -1985,19 +1997,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'categories',
   data: function data() {
     return {
-      categories: null,
-      id: null
+      categories: null
     };
   },
   computed: {},
   methods: {
-    selectedCategory: function selectedCategory() {
-      this.$emit('selectedCategory');
+    selectedCategory: function selectedCategory(id) {
+      this.cat_id = id;
+      this.$emit('eventname', this.$parent.cat_id = id);
     }
   },
   mounted: function mounted() {
@@ -2005,7 +2019,6 @@ __webpack_require__.r(__webpack_exports__);
 
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/getCategories").then(function (response) {
       _this.categories = response.data;
-      console.log(response.data);
     });
   }
 });
@@ -2040,6 +2053,43 @@ __webpack_require__.r(__webpack_exports__);
     console.log('Component mounted.');
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -2100,11 +2150,19 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _store_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/index.js */ "./resources/js/store/index.js");
-/* harmony import */ var _components_Categories_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Categories.vue */ "./resources/js/components/Categories.vue");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _store_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/index.js */ "./resources/js/store/index.js");
+/* harmony import */ var _components_Categories_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Categories.vue */ "./resources/js/components/Categories.vue");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -2159,14 +2217,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -2174,14 +2224,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'product',
   components: {
-    Categories: _components_Categories_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    Categories: _components_Categories_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
   data: function data() {
     return {
       results: null,
       imgPath: '/images/product_images/',
       hover: false,
-      show: false
+      show: false,
+      cat_id: null,
+      url: null
     };
   },
   computed: {
@@ -2217,22 +2269,51 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         cart: JSON.stringify(this.$store.state.cart)
       }; //axios.post('/your-checkout-endpoint', data);
 
-      alert('Pay us ' + this.totalPrice + 'zł');
+      alert('Pay ' + this.totalPrice + 'zł');
     },
-    getProductsByCategory: function getProductsByCategory(id) {
+    setUrl: function setUrl(url) {
+      if (this.cat_id == null) {
+        this.url = "/getProducts";
+      } else {
+        this.url = '/getProductsByCategory/' + this.cat_id;
+      }
+    },
+    getProductsByCategory: function getProductsByCategory() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("'/getProductsByCategory'+id").then(function (response) {
-        _this.results = response.data.data; //console.log(response.data) 
-      });
+      this.setUrl(this.url);
+
+      _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(_this.url).then(function (response) {
+                  if (_this.cat_id == null) _this.results = response.data.data;else _this.results = response.data; //return JSON.stringify(response.data); 
+                });
+
+              case 1:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
     }
   },
-  mounted: function mounted() {
-    var _this2 = this;
+  created: function created() {
+    this.getProductsByCategory();
+  },
+  watch: {
+    cat_id: function cat_id(val) {
+      if (this.cat_id == null) {
+        this.url = "/getProducts";
+      } else {
+        this.url = '/getProductsByCategory/' + val;
+      }
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/getProducts").then(function (response) {
-      _this2.results = response.data.data; //console.log(response.data) 
-    });
+      this.getProductsByCategory();
+    }
   }
 });
 
@@ -2248,7 +2329,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_NavBar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/NavBar.vue */ "./resources/js/components/NavBar.vue");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Footer.vue */ "./resources/js/components/Footer.vue");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 //
 //
 //
@@ -2270,12 +2352,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'app',
   components: {
-    NavBar: _components_NavBar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    NavBar: _components_NavBar_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Footer: _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {};
@@ -2304,14 +2390,104 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'product',
-  components: {},
-  data: function data() {
-    return {
-      imgPath: '/images/product_images/'
-    };
-  }
+  name: 'hello',
+  components: {}
+  /*
+  data () {
+  return { 
+  }}
+  */
+
 });
 
 /***/ }),
@@ -2481,7 +2657,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.spacing {\r\n  margin-right: 10px;\r\n  text-transform: uppercase;\n}\n.navbar-container {\r\n  display: flex;\n}\nnav a::after {\r\n    margin-left: 1em;\r\n    content: \"-\";\r\n    color: white;\n}\nnav a:hover {\r\n    color: silver;\r\n    text-decoration: none;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.spacing {\r\n  margin-right: 10px;\r\n  text-transform: uppercase;\n}\n.navbar-container {\r\n  display: flex;\n}\nnav a::after {\r\n    margin-left: 1em;\r\n    content: \"-\";\r\n    color: white;\n}\nnav a:hover {\r\n    color: green;\r\n    text-decoration: none;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -2519,7 +2695,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.logo {\r\n  max-height: 40px;\n}\n.row-me {\r\n  display: inline-block;\n}\n.top-bar {\r\n  padding: 2%;\r\n  background-color: #151d25;\r\n  color: white;\r\n  text-transform: upper;\n}\nnav a {\r\n    color: white;\n}\n.pull-right {\r\n  text-align: right;\n}\n.img_nav {\r\n  background-color: silver;\r\n  max-height: 40px;\n}\n.display-inline {\r\n  display: inline;\n}\n.navbar-container {\r\n  float: right;\r\n  padding-right: 5em;\n}\n.content {\r\n  width: 100%;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.logo {\r\n  max-height: 30px;\n}\n.row-me {\r\n  display: inline-block;\n}\n.top-bar {\r\n  padding: 2%;\r\n  background-color: #151d25;\r\n  color: white;\n}\nnav a {\r\n    color: white;\n}\n.pull-right {\r\n  text-align: right;\n}\n.img_nav {\r\n  background-color: silver;\r\n  max-height: 40px;\n}\n.display-inline {\r\n  display: inline;\n}\n.navbar-container {\r\n  float: right;\r\n  padding-right: 5em;\n}\n.content {\r\n  width: 100%;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -2535,10 +2711,11 @@ exports.push([module.i, "\n.logo {\r\n  max-height: 40px;\n}\n.row-me {\r\n  dis
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);", ""]);
 
 // module
-exports.push([module.i, "\n.hero-container {\r\n    max-width: 100%;\r\n    background-image: url('/images/pizza-to.jpg');\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    min-height: 90vh;\r\n    position: relative; \r\n    padding-left: 25%;\r\n    padding-right: 25%;\r\n    padding-top: 15%;\r\n    padding-bottom: auto;\n}\r\n/*\r\n.jumbotron {\r\n        \r\n        text-align: center;\r\n        background-color: none;\r\n        width: 60%;\r\n    }\r\n    */\n.hero-header {\r\n        font-size: 5.31em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\n}\n.lead {\r\n        \r\n        font-size: 1.25em;\r\n        letter-spacing: 4px;\r\n        line-height: 1.875em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Montserrat\";\r\n        text-align: center;\n}\n.centered {\r\n        padding-left: auto;\r\n        padding-right: auto;\r\n        \r\n        text-align: center;\n}\n.gray-background {\r\n        background-color: #333;\r\n        opacity: 0.8;\n}\r\n", ""]);
+exports.push([module.i, "\n.hero-container {\r\n    \r\n    max-width: 100%;\r\n    background-image: url('/images/pizza-to.jpg');\r\n    background-size: 100% 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: bottom left;\r\n    min-height: 95vh;\r\n    position: relative; \r\n    padding-left: 35%;\r\n    padding-right: 35%;\r\n    padding-top: 10%;\r\n    padding-bottom: auto;\r\n    z-index:0;\n}\n.hero-header {\r\n        font-size: 5.31em;\r\n        color: #ffffff;\r\n        font-weight: 400; \r\n        font-family: 'Lobster', cursive;\n}\n.lead {\r\n        \r\n        font-size: 1.25em;\r\n        letter-spacing: 4px;\r\n        line-height: 1.875em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: 'Montserrat', sans-serif;\r\n        text-align: center;\n}\n.centered {\r\n        padding-left: auto;\r\n        padding-right: auto;\r\n        \r\n        text-align: center;\n}\n.gray-background {\r\n        background-color: #333;\r\n        opacity: 0.9;\r\n        padding: 5%;\n}\n.spaner {\r\n        color: white;\r\n        padding: 1%;\n}\n.white {\r\n        color: white;\n}\n.btn-gray {\r\n        background-color: #151d25;\r\n        font-size: 0.94em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Montserrat\";\r\n        text-align: center;\r\n        text-transform: uppercase;\r\n        border-radius: 0;\r\n        min-width: 12vw;\n}\n.btn-gray:hover {\r\n        background-color: green;\r\n        color: white;\n}\r\n\r\n    /* ABOUT CONTAINER*/\n.about-container { \r\n         min-height: 40vh;\r\n         width: 100%;\r\n        z-index: 10;\r\n        position: relative; \r\n        padding-left: 25%;\r\n        padding-right: 25%;\r\n        text-align:center;\r\n        margin-top: -5vh;\r\n        \r\n        display: flex;\n}\n.about-book {\r\n        width: 25vw;\r\n        height : 100%;\r\n        min-height: 40vh;\r\n       \r\n        text-align:center; \r\n        padding: 5%;\n}\n.about-book-left {\r\n        background-image: url('/images/baker.jpg');\r\n         background-size: cover;\r\n         float: left; \r\n         height: 100%;\r\n         width: 50%;\r\n\r\n         background-repeat: no-repeat; background-color: black;\n}\n.about-book-right {\r\n         \r\n        float: left; \r\n        width: 50%;\r\n        height: 100%;\r\n        background-color: white;\r\n\r\n         background-image: url('/images/pizza-draw.png');\r\n         background-size: 10%;\r\n         background-position: center 5%;\r\n         background-repeat: no-repeat;\n}\n.about-header {\r\n        font-size: 2.1875em;\r\n        color: #28374b;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        margin-top: 2%;\n}\r\n\r\n    /* QUOTE CONTAINER*/\n.quote-container {\r\n        min-height: 60vh;\r\n        width: 100%;\r\n        z-index: 1;\r\n        background-color: #999;\r\n        margin-top: -5vh;\r\n        background-image: url('/images/bar.jpg') ;\r\n        background-size: cover;\r\n        background-position: right bottom;\r\n    position: relative;\n}\n.layer {\r\n        background-color: rgba(230, 232, 230, 0.3);\r\n        position: absolute;\r\n        top: 0;\r\n        left: 0;\r\n        width: 100%;\r\n        height: 100%;\r\n        z-index: 0;\n}\n.quote-text {\r\n        padding-left: 30%;\r\n        padding-right: 30%;\r\n        padding-top: 20%;\r\n        z-index: 2;\r\n        text-align:center;\n}\n.quote-header {\r\n        text-transform: uppercase;\r\n        font-size: 1.25em;\r\n        letter-spacing: 4px;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Montserrat\";\r\n        text-align: center;\n}\n.quote-author {\r\n        font-size: 1.25em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\n}\n.draw-pizza {\r\n        background-image: url('/images/pizza-draw.png');\r\n         background-size: 6%;\r\n         background-position: center 5%;\r\n         background-repeat: no-repeat;\n}\r\n\r\n    /* MENU CONTAINER*/\n.menu-container {\r\n        min-height: 90vh;\r\n        width: 100%;\r\n        background-color: white;\r\n        padding-left: 20%;\r\n        padding-right: 20%;\r\n        padding-top: 5%;\r\n        padding-bottom: 5%;\r\n        text-align: center;\n}\n.menu-header {\r\n        font-size: 2.1875em;\r\n        color: #28374b;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        padding-top: 5%;\r\n        padding-bottom: 5%;\n}\n.menu-grid {\r\n        width: 100%;\r\n        display: grid;\r\n        grid-template-columns: 1fr 1fr 1fr 1fr;\r\n        grid-template-rows: 1fr 1fr 1fr;\r\n        gap: 0px 0px;\r\n  \r\n        grid-template-areas:\r\n            \"a1 a2 a3 a4\"\r\n            \"b1 b2 b3 b4\"\r\n            \"c1 c2 c3 c4\";\r\n            padding-bottom: 5%;\n}\n.menu-grid div {\r\n        min-width: 100px;\r\n        min-height: 20vh;\r\n        padding: 5%;\n}\n.a1, .menu-img {\r\n        background-image: url('/images/product_images/011520211839026001e14689d3a.jpg') ;\r\n        background-size: cover;\r\n        background-position: center center;\n}\n.menu-bg, .menu-grid-text {\r\n        background-color: #9fb0a5;\n}\n.menu-h{\r\n        font-size: 1.4375em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        text-align: center;\r\n        padding: 5%;\n}\n.menu-p {\r\n        \r\n        font-size: 0.8125em;\r\n        letter-spacing: 1px;\r\n        line-height: 1.5625em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Montserrat\";\r\n        text-align: center;\n}\n.menu-pp {\r\n        font-size: 1.4375em;\r\n        color: #ffffff;\r\n        font-weight: 400;\r\n        font-family: \"Lobster\";\r\n        text-align: center;\n}\n.a3 {\r\n        background-image: url('/images/product_images/011520211840066001e186baf43.jpg') ;\n}\r\n\r\n    /* VIDEO CONTAINER Seasoning Pizza at Italian Restaurant.mp4 */\n.video-container {\r\n        max-width: 100vw;\r\n        height: 60vh;\n}\n#myVideo {\r\n        position: relative;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    width: 100%;\r\n    height: 100%;\n}\r\n\r\n    /* Add some content at the bottom of the video/page */\n.video-container-content {\r\n  position: absolute;\r\n  height: 50vh;\r\n  text-align: center;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  display: none;\n}\r\n\r\n/* Style the button used to pause/play the video */\n#myBtn {\r\n  width: 200px;\r\n  font-size: 18px;\r\n  padding: 10px;\r\n  border: none;\r\n  background: #000;\r\n  color: #fff;\r\n  cursor: pointer;\n}\n#myBtn:hover {\r\n  background: #ddd;\r\n  color: black;\n}\r\n\r\n/* NEWSLETTER CONTAINER*/\n.newsletter-container {\r\n    background-color: white;\r\n    \r\n    padding: 5% 30% 10% 30%;\r\n    text-align: center;\n}\n.newsletter-header {\r\n    font-size: 2.1875em;\r\n    color: #28374b;\r\n    font-weight: 400;\r\n    font-family: \"Lobster\";\r\n    padding-top: 5%;\r\n    padding-bottom: 5%;\n}\n.newsletter-p {\r\n    font-size: 0.9375em;\r\n    letter-spacing: 2px;\r\n    line-height: 1.75em;\r\n    color: #28374b;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\r\n    text-align: center;\n}\n.newsletter {\r\npadding: 80px 0;\r\nbackground: #19beda;\n}\n.newsletter .content {\r\nmax-width: 650px;\r\nmargin: 0 auto;\r\ntext-align: center;\r\nposition: relative;\r\nz-index: 2;\n}\n.newsletter .content h2 {\r\ncolor: #243c4f;\r\nmargin-bottom: 40px;\n}\n.newsletter .content .form-control {\r\nheight: 50px;\r\nborder-color: #ffffff;\r\nborder-radius:0;\n}\n.newsletter .content.form-control:focus {\r\nbox-shadow: none;\r\nborder: 1px solid #243c4f;\n}\n.newsletter .content .btn {\r\nmin-height: 50px; \r\nborder-radius:0;\r\nbackground: #243c4f;\r\ncolor: #fff;\r\nfont-weight:600;\n}\r\n\r\n/* FOOTER CONTAINER */\n.footer-container {\r\n    background-color: #27364a;\r\n    min-height: 15vh;\r\n    padding: 5% 20% 10% 20%;\r\n    color: white;\r\n    display: flex;\r\n    justify-content: space-around;\n}\n.footer-container-h {\r\n    font-size: 1.5625em;\r\n    letter-spacing: 3px;\r\n    line-height: 2.6875em;\r\n    color: #ffffff;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\r\n    text-align: left;\r\n    text-transform: uppercase;\n}\n.footer-location-h {\r\n    text-transform: uppercase;\r\n    font-size: 1.5625em;\r\n    letter-spacing: 3px;\r\n    line-height: 2.6875em;\r\n    color: #ffffff;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\r\n    text-align: left;\n}\n.footer-location-p {\r\n    display: flex;\r\n    max-width: 25vw;\n}\r\n\r\n\r\n/* FOOTER BOTTOM CONTAINER */\n.footer-bottom-container {\r\n    background-color: #000;\r\n    min-height: 10vh;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    color: white;\r\n    padding: 2% 20% 2% 20%;\n}\n.footer-bottom-left {\r\n    font-size: 0.9375em;\r\n    letter-spacing: 2px;\r\n    line-height: 1.875em;\r\n    color: #ffffff;\r\n    font-weight: 400;\r\n    font-family: \"Montserrat\";\n}\n.footer-bottom-right {\r\n    text-align: right;\n}\r\n", ""]);
 
 // exports
 
@@ -2557,7 +2734,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.removeBtnLink  {text-decoration: none;}\n.prodImg { max-height: 50px}\n.table {\r\n    table-layout: fixed;\r\n    word-wrap: break-word;\n}\n.marginit-left {\r\n      width: 25px;\r\n    height: 25px;\r\n    font-weight: 700;  border: 1px solid #333; border-radius: 50%;\r\n    padding-left: 5px; padding-right: 5px;  background-color: white; z-index: 10;\r\n    \r\n    margin-left: -10px;\r\n    margin-top: -10px;\r\n    \r\n    color: #000;\n}\n.modal-content {\r\n      padding: 2%; max-width: 75%;\n}\n.cart-summary-line {\r\n      border-bottom: 1px solid red;\n}\n.no-underline:hover {\r\n      text-decoration: none;\n}", ""]);
+exports.push([module.i, "\n.product-content {\r\n  min-height: 75vh;\r\n  padding-left: 10%;\r\n  padding-right: 10%;\r\n  padding-top: 2%;\r\n  padding-bottom: 2%;\n}\n.removeBtnLink  {text-decoration: none;}\n.prodImg { max-height: 50px}\n.table {\r\n    table-layout: fixed;\r\n    word-wrap: break-word;\n}\n.marginit-left {\r\n      \r\n    font-weight: 700;  \r\n    border: 1px solid #333; \r\n    border-radius: 50%;\r\n    padding-left: 5px; \r\n    padding-right: 5px;  \r\n    background-color: white; \r\n    z-index: 10;\r\n    \r\n    margin-left: -1em;\r\n    margin-top: -10px;\r\n    \r\n    color: #000;\n}\n.modal-content {\r\n      padding: 2%; max-width: 75%;\n}\n.cart-summary-line {\r\n      border-bottom: 1px solid red;\n}\n.no-underline:hover {\r\n      text-decoration: none;\n}", ""]);
 
 // exports
 
@@ -2842,6 +3019,765 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 process.umask = function() { return 0; };
+
+
+/***/ }),
+
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      define(prototype, method, function(arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  define(Gp, toStringTagSymbol, "Generator");
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : undefined
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
 
 
 /***/ }),
@@ -3661,19 +4597,39 @@ var render = function() {
   return _c("div", [
     _c(
       "ul",
-      _vm._l(_vm.categories, function(category) {
-        return _c("li", { staticClass: "display-inline" }, [
+      [
+        _c("li", { staticClass: "display-inline" }, [
           _c(
             "a",
             {
-              attrs: { href: "/getProductsByCategory/" + category.id },
-              on: { click: _vm.selectedCategory }
+              attrs: { href: "#" },
+              on: {
+                click: function($event) {
+                  return _vm.selectedCategory(null)
+                }
+              }
             },
-            [_vm._v("[" + _vm._s(category.name) + "]")]
+            [_vm._v("[ ALL ]")]
           )
-        ])
-      }),
-      0
+        ]),
+        _vm._l(_vm.categories, function(category) {
+          return _c("li", { staticClass: "display-inline" }, [
+            _c(
+              "a",
+              {
+                attrs: { href: "#" },
+                on: {
+                  click: function($event) {
+                    return _vm.selectedCategory(category.id)
+                  }
+                }
+              },
+              [_vm._v("[ " + _vm._s(category.name) + " ]")]
+            )
+          ])
+        })
+      ],
+      2
     )
   ])
 }
@@ -3713,6 +4669,75 @@ var staticRenderFns = [
             _c("div", { staticClass: "card-header" }, [_vm._v("Contact")])
           ])
         ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "footer-container" }, [
+        _c("div", { staticClass: "footer-location" }, [
+          _c("h3", { staticClass: "footer-location-h" }, [_vm._v("Location")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "footer-location-p" }, [
+            _c("div", { staticClass: "footer-location-p-left" }, [
+              _vm._v("678 Some Awesome Brooklyn, NY 112233")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "footer-location-p-right" }, [
+              _vm._v("678 Some Awesome Brooklyn, NY 112233")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "footer-hours" }, [
+          _c("h3", { staticClass: "footer-location-h" }, [_vm._v("HOURS")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "footer-location-p" }, [
+            _c("div", { staticClass: "footer-location-p-left" }, [
+              _vm._v("Monday - Thursday, 08.00am - 11.00pm")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "footer-location-p-right" }, [
+              _vm._v("Friday - Saturday, 08.00am - 12.00pm")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "footer-bottom-container" }, [
+        _c("div", { staticClass: "footer-bottom-left" }, [
+          _vm._v("Copyright 2017 © Foody - All rights reserved.")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "footer-bottom-right" }, [_vm._v("F T I")])
       ])
     ])
   }
@@ -3782,6 +4807,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "product-content" },
     [
       _c(
         "p",
@@ -3806,9 +4832,11 @@ var render = function() {
               attrs: { src: "/images/cart.svg" }
             }),
             _vm._v(" "),
-            _c("span", { staticClass: "marginit-left" }, [
-              _vm._v(_vm._s(this.$store.state.cartCount))
-            ]),
+            this.$store.state.cartCount > 0
+              ? _c("span", { staticClass: "marginit-left badge badge-light" }, [
+                  _vm._v(_vm._s(this.$store.state.cartCount))
+                ])
+              : _vm._e(),
             _vm._v(" Sum: " + _vm._s(_vm.totalPrice) + "zł")
           ])
         ]
@@ -3908,7 +4936,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "tbody",
-          _vm._l(_vm.results, function(myprod, index) {
+          _vm._l(this.results, function(myprod, index) {
             return _c("tr", { key: index, attrs: { "track-by": "id" } }, [
               _c("th", { attrs: { scope: "row" } }, [
                 _vm._v(_vm._s(index + 1))
@@ -4013,7 +5041,12 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "content" }, [_c("router-view")], 1)
+        _c(
+          "div",
+          { staticClass: "content" },
+          [_c("router-view"), _vm._v(" "), _c("Footer")],
+          1
+        )
       ])
     ]
   )
@@ -4052,25 +5085,224 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _vm._m(3),
+    _vm._v(" "),
+    _c("div", { staticClass: "video-container" }, [
+      _c(
+        "video",
+        {
+          attrs: { autoplay: "", muted: "", loop: "", id: "myVideo" },
+          domProps: { muted: true }
+        },
+        [
+          _c("source", {
+            attrs: {
+              src: "/images/Seasoning Pizza at Italian Restaurant.mp4",
+              type: "video/mp4"
+            }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(4)
+    ]),
+    _vm._v(" "),
+    _vm._m(5)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "hero-container centered" }, [
-      _c("h1", { staticClass: " hero-header gray-background " }, [
-        _vm._v("It's a Food Adventure")
+    return _c("div", { staticClass: "hero-container centered " }, [
+      _c("div", { staticClass: "gray-background" }, [
+        _c("h1", { staticClass: " hero-header  " }, [
+          _vm._v("It's a Food Adventure")
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "spaner  " }, [_vm._v(" - - - - - - - ")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "lead " }, [_vm._v("You'll Never Put A B")]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-gray white" }, [
+          _vm._v("Our menu")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "about-container " }, [
+      _c("div", { staticClass: "about-book about-book-left " }),
+      _vm._v(" "),
+      _c("div", { staticClass: "about-book about-book-right" }, [
+        _c("h3", { staticClass: "about-header" }, [_vm._v("Story of Us")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Quisque velit nisi, \r\n            Quisque velit nisi Quisque velit nisi\r\n            Quisque velit nisi Quisque velit nisi\r\n            Quisque velit nisi "
+          )
+        ]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-gray white" }, [_vm._v("More")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "quote-container" }, [
+      _c("div", { staticClass: "layer" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "quote-text" }, [
+        _c("h3", { staticClass: "quote-header" }, [
+          _vm._v('"The most romantic restaurant out there"')
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "quote-author" }, [_vm._v("John Doe")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "menu-container" }, [
+      _c("h3", { staticClass: "menu-header draw-pizza" }, [
+        _vm._v("We Present You Our Menu")
       ]),
       _vm._v(" "),
-      _c("span", [_vm._v(" ")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "lead gray-background " }, [
-        _vm._v("You'll Never Put A B")
+      _c("div", { staticClass: "menu-grid" }, [
+        _c("div", { staticClass: " menu-img" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "a2 menu-grid-text" }, [
+          _c("h3", { staticClass: " menu-h" }, [_vm._v("Pizza Margerita")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "pa2 menu-p" }, [
+            _vm._v(" Quisque velit nisi Quisque velit nisi ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "ppa2 menu-pp" }, [_vm._v("29.99")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "a3 menu-img" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "a4 menu-grid-text" }, [
+          _c("h3", { staticClass: " menu-h" }, [_vm._v("Pizza Pepperoni")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "pa2 menu-p" }, [
+            _vm._v(" Quisque velit nisi Quisque velit nisi ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "ppa2 menu-pp" }, [_vm._v("29.99")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "b1 menu-grid-text" }, [
+          _c("h3", { staticClass: " menu-h" }, [_vm._v("Pizza Margerita")]),
+          _vm._v(" "),
+          _c("p", { staticClass: " menu-p" }, [
+            _vm._v(" Quisque velit nisi Quisque velit nisi ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: " menu-pp" }, [_vm._v("29.99")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "b2 menu-img" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "b3 menu-grid-text" }, [
+          _c("h3", { staticClass: " menu-h" }, [_vm._v("Pizza Margerita")]),
+          _vm._v(" "),
+          _c("p", { staticClass: " menu-p" }, [
+            _vm._v(" Quisque velit nisi Quisque velit nisi ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: " menu-pp" }, [_vm._v("29.99")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "b4 menu-img" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "c1 menu-img" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "c2 menu-grid-text" }, [
+          _c("h3", { staticClass: " menu-h" }, [_vm._v("Pizza Margerita")]),
+          _vm._v(" "),
+          _c("p", { staticClass: " menu-p" }, [
+            _vm._v(" Quisque velit nisi Quisque velit nisi ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: " menu-pp" }, [_vm._v("29.99")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "c3 menu-img" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "c4 menu-grid-text" }, [
+          _c("h3", { staticClass: " menu-h" }, [_vm._v("Pizza Margerita")]),
+          _vm._v(" "),
+          _c("p", { staticClass: " menu-p" }, [
+            _vm._v(" Quisque velit nisi Quisque velit nisi ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: " menu-pp" }, [_vm._v("29.99")])
+        ])
       ]),
       _vm._v(" "),
-      _c("button", { staticClass: "btn btn-dark" }, [_vm._v("Our menu")])
+      _c("h3", { staticClass: "menu-header" }, [_vm._v("Show me more ")]),
+      _vm._v(" "),
+      _c("p", [_c("i", { staticClass: "fas fa-chevron-circle-down" })])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "video-container-content" }, [
+      _c("h1", [_vm._v("Heading")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("Lorem ipsum...")]),
+      _vm._v(" "),
+      _c("button", { attrs: { id: "myBtn", onclick: "myFunction()" } }, [
+        _vm._v("Pause")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "newsletter-container" }, [
+      _c("h3", { staticClass: "newsletter-header draw-pizza" }, [
+        _vm._v("Stay up to date")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "newsletter-p" }, [
+        _vm._v("Quisque velit nisi, pretium it latina")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-group" }, [
+        _c("input", {
+          staticClass: "form-control",
+          attrs: { type: "email", placeholder: "Enter your email" }
+        }),
+        _vm._v(" "),
+        _c("span", { staticClass: "input-group-btn" }, [
+          _c(
+            "button",
+            { staticClass: "btn btn-gray ", attrs: { type: "submit" } },
+            [_vm._v("Subscribe Now")]
+          )
+        ])
+      ])
     ])
   }
 ]
@@ -21016,6 +22248,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_4c2584f6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Contact_vue_vue_type_template_id_4c2584f6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Footer.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer.vue?vue&type=template&id=61a7c374& */ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&");
+/* harmony import */ var _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.vue?vue&type=script&lang=js& */ "./resources/js/components/Footer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Footer.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Footer.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Footer.vue?vue&type=template&id=61a7c374& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=template&id=61a7c374& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
